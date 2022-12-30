@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Buff Helper</string>
+    <string name="buy">Buy:</string>
+    <string name="item">item</string>
+    <string name="buff_image_logo">buff image logo</string>
+    <string name="sell">Sell:</string>
+    <string name="roi">ROI:</string>
+    <string name="at">AT:</string>
+    <string name="profit">Profit:</string>
+    <string name="roifix">ROI:</string>
+    <string name="prof">Prof:</string>
+    <string name="tax">Tax:</string>
+    <string name="bought">bought</string>
+    <string name="sold">sold</string>
+</resources>

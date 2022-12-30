@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    tools:context=".MainActivity"
+    >
+
+    <View
+        android:id="@+id/topblock"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:background="@color/midnight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/discordlogo"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/discord"
+        app:layout_constraintEnd_toEndOf="@+id/topblock"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="160dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/buff_image_logo"
+        android:paddingStart="10dp"
+        android:paddingEnd="1dp"
+        android:src="@drawable/buffhelperfinal"
+        app:layout_constraintBottom_toBottomOf="@+id/topblock"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.491" />
+
+    <TextView
+        android:id="@+id/sell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:paddingStart="10dp"
+        android:shadowColor="#000000"
+        android:shadowDx="2.5"
+        android:shadowDy="2.3"
+        android:shadowRadius="2.6"
+        android:text="@string/sell"
+        android:textColor="@color/silk"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selltext" />
+
+    <TextView
+        android:id="@+id/selltext"
+        android:layout_width="42dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="16dp"
+        android:paddingStart="10dp"
+        android:shadowColor="#000000"
+        android:shadowDx="2.5"
+        android:shadowDy="2.3"
+        android:shadowRadius="2.6"
+        android:text="@string/buy"
+        android:textColor="@color/silk"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topblock" />
+
+
+    <EditText
+        android:id="@+id/BuyValue2"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:hint="@string/bought"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textColor="@color/silk"
+        app:layout_constraintStart_toEndOf="@+id/BuyValue1"
+        app:layout_constraintTop_toBottomOf="@+id/topblock" />
+
+    <EditText
+        android:id="@+id/BuyValue1"
+        android:layout_width="85dp"
+        android:inputType="numberDecimal"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:hint="@string/bought"
+        android:textAlignment="center"
+        android:textColor="@color/silk"
+        app:layout_constraintStart_toEndOf="@+id/selltext"
+        app:layout_constraintTop_toBottomOf="@+id/topblock" />
+
+    <EditText
+        android:id="@+id/BuyValue3"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:hint="@string/bought"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textColor="@color/silk"
+        app:layout_constraintStart_toEndOf="@+id/BuyValue2"
+        app:layout_constraintTop_toBottomOf="@+id/topblock" />
+
+    <EditText
+        android:id="@+id/BuyValue4"
+        android:layout_width="85dp"
+        android:inputType="numberDecimal"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:hint="@string/bought"
+        android:textAlignment="center"
+        android:textColor="@color/silk"
+        app:layout_constraintStart_toEndOf="@+id/BuyValue3"
+        app:layout_constraintTop_toBottomOf="@+id/topblock" />
+
+    <EditText
+        android:id="@+id/SellValue1"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="4dp"
+        android:hint="@string/sold"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textColor="@color/silk"
+        app:layout_constraintStart_toEndOf="@+id/sell"
+        app:layout_constraintTop_toBottomOf="@+id/BuyValue1" />
+
+    <EditText
+        android:id="@+id/SellValue2"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:hint="@string/sold"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textColor="@color/silk"
+        app:layout_constraintStart_toEndOf="@+id/SellValue1"
+        app:layout_constraintTop_toBottomOf="@+id/BuyValue2" />
+
+
+    <EditText
+        android:id="@+id/SellValue3"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:hint="@string/sold"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textColor="@color/silk"
+        app:layout_constraintStart_toEndOf="@+id/SellValue2"
+        app:layout_constraintTop_toBottomOf="@+id/BuyValue3" />
+
+    <EditText
+        android:id="@+id/SellValue4"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:hint="@string/sold"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textColor="@color/silk"
+        app:layout_constraintStart_toEndOf="@+id/SellValue3"
+        app:layout_constraintTop_toBottomOf="@+id/BuyValue4" />
+
+
+    <TextView
+        android:id="@+id/ROI1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/roifix"
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Profit1" />
+
+    <TextView
+        android:id="@+id/Profit1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/prof"
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Tax1" />
+
+    <TextView
+        android:id="@+id/AT1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/at"
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SellValue1" />
+
+    <TextView
+        android:id="@+id/Tax1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/tax"
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AT1" />
+
+
+    <TextView
+        android:id="@+id/Tax2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="126dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/tax"
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AT1" />
+
+    <TextView
+        android:id="@+id/Profit2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="126dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/prof"
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Tax1" />
+
+    <TextView
+        android:id="@+id/ROI2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="126dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/roifix"
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Profit1" />
+
+    <TextView
+        android:id="@+id/AT2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="126dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/at"
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SellValue2" />
+
+    <TextView
+        android:id="@+id/AT3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="219dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/at"
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SellValue2" />
+
+    <TextView
+        android:id="@+id/Tax3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="219dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/tax"
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AT1" />
+
+    <TextView
+        android:id="@+id/Profit3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="219dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/prof"
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Tax1" />
+
+    <TextView
+        android:id="@+id/ROI3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="219dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/roifix"
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Profit1" />
+
+    <TextView
+        android:id="@+id/ROI4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="312dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/roifix"
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Profit1" />
+
+
+    <TextView
+        android:id="@+id/AT4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="312dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/at"
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SellValue2" />
+
+
+    <TextView
+        android:id="@+id/Tax4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="312dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/tax"
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AT1" />
+
+    <TextView
+        android:id="@+id/Profit4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="312dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/prof"
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Tax1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
