@@ -5,7 +5,6 @@ not associated with netease or buff163
 
 
 Font - The Nunito Project Authors (https://github.com/googlefonts/nunito)
-This Font Software is licensed under the SIL Open Font License, Version 1.1.
 
 
  */
@@ -41,8 +40,6 @@ class MainActivity : AppCompatActivity() {
 
         val window: Window = this@MainActivity.window
         window.navigationBarColor = ContextCompat.getColor(this@MainActivity, R.color.midnight)
-
-
 
 
         var AfterTax1: Double
@@ -90,7 +87,7 @@ class MainActivity : AppCompatActivity() {
             return (Profit / Buy * 100)
         }
 
-        val df = DecimalFormat() //decimalformat used for converting numbers to 2 decimal digits,
+        val df = DecimalFormat() //decimalformat used for converting numbers up to 2 decimal digits,
         df.setMaximumFractionDigits(2);
 
 
@@ -239,16 +236,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         discordlogo.setOnClickListener(){
-            /*clipboard.setPrimaryClip(clip)
-            discordlink.show()
-            */
 
             val discordinvite: Uri = Uri.parse("https://www.discord.com/invite/k2mDMQaTSN")
             val openinvite = Intent(Intent.ACTION_VIEW, discordinvite)
             startActivity(openinvite)
 
         }
-
 
 
 
