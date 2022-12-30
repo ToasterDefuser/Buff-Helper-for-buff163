@@ -6,6 +6,4 @@ written in kotlin using the kotlin android extension to make the syntax more rea
 
 compiled for sdk 32
 
-uploading this here since youtube gave me a strike for phishing 🚨🚨🚨 100% malware 🚨🚨🚨
-
-# website -> https://buffhelper.000webhostapp.com/index.html (marked as not safe because 'omg free hosting + .apk file = malware')
+# website -> https://buffhelper.000webhostapp.com/index.html
