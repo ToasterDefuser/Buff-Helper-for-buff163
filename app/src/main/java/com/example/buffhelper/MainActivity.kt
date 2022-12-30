@@ -239,9 +239,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         discordlogo.setOnClickListener(){
-            /*clipboard.setPrimaryClip(clip)
-            discordlink.show()
-            */
 
             val discordinvite: Uri = Uri.parse("https://www.discord.com/invite/k2mDMQaTSN")
             val openinvite = Intent(Intent.ACTION_VIEW, discordinvite)
