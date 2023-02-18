@@ -14,4 +14,14 @@
     <string name="sold">sold</string>
     <string name="total">Total:</string>
     <string name="totaltextview">total</string>
+    <string name="atcol">AT: </string>
+    <string name="taxcol">Tax: </string>
+    <string name="profcol">Prof: </string>
+    <string name="roicol">ROI: </string>
+    <string name="asd">asd</string>
+    <string name="totalprof">Profit:</string>
+    <string name="atspaced">AT: </string>
+    <string name="taxspaced">Tax: </string>
+    <string name="profspaced">Profit: </string>
+    <string name="roispaced">ROI: </string>
 </resources>
