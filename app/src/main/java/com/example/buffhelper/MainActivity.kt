@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         window.navigationBarColor = ContextCompat.getColor(this@MainActivity, R.color.midnight)
 
 
-        var AfterTax1: Double
+        var AfterTax1 : BigDecimal
         var AfterTax2 : Double
         var AfterTax3 : Double
         var AfterTax4 : Double
@@ -179,23 +179,12 @@ class MainActivity : AppCompatActivity() {
 
 
                 try {
-                    res = (Profit_total.text.toString().substring(8).replace(",", ".").replace(Regex("\\s"), "").toFloat() / sum) * 100
+                    res = (Profit_total.text.toString().substring(8).replace(",", "").replace(Regex("\\s"), "").toFloat() / sum) * 100
                 }catch(e:IndexOutOfBoundsException){
                     res = 0.0
                 }
 
 
-                /*for(TextView in at){
-                try{
-                    temp = TextView.text.toString().replace(Regex("\\s"), "")
-                    atval = temp.replace(",",".").toDouble()
-                    cheese += 1
-                }catch (e: NumberFormatException){
-                    atval = 0.0
-                }
-
-                sum += atval
-            }*/
             }
             val sumdf = df.format(res)
 
@@ -223,14 +212,6 @@ class MainActivity : AppCompatActivity() {
                 Profit_total.setTextColor(Color.parseColor("#C3C3C3"))
             }
 
-        }
-
-
-        fun balls() {
-            val num = 6 // replace with any number you want
-            val percentage = 2.5 / 100
-            val result = (num * percentage).toBigDecimal().setScale(2, RoundingMode.UP)
-            ROI_total.text = result.toString()
         }
 
 
@@ -262,17 +243,25 @@ class MainActivity : AppCompatActivity() {
 
 
         SellValue1.addTextChangedListener {
-            if (!(SellValue1.text.toString().trim().equals("")) && SellValue1.text.toString() != "." && SellValue1.text.toString() != "0") {
+            if (!(SellValue1.text.toString().trim().equals("")) && SellValue1.text.toString() != ".") {
 
-                AfterTax1 = SellValue1.text.toString().toFloat()*0.975
-                Tax1VAL.text = ((SellValue1.text.toString().toFloat()*(2.5/100)).toBigDecimal().setScale(2,RoundingMode.HALF_EVEN)).toString()
-                AT1VAL.text = ((SellValue1.text.toString().toFloat()-Tax1VAL.text.toString().toFloat())).toString()
+                AfterTax1 = BigDecimal(SellValue1.text.toString()).multiply(BigDecimal("0.975"))
+
+                if((BigDecimal(SellValue1.text.toString()).multiply(BigDecimal("0.025"))).toString().substringAfter(".").trimEnd('0').length>2){
+                    Tax1VAL.text = (BigDecimal(SellValue1.text.toString()).multiply(BigDecimal("0.025"))).setScale(2,RoundingMode.CEILING).toString()
+                }else{
+                    Tax1VAL.text = (BigDecimal(SellValue1.text.toString()).multiply(BigDecimal("0.025"))).setScale(2).toString()
+                }
+
+                AT1VAL.text = (BigDecimal(SellValue1.text.toString()).subtract(BigDecimal(Tax1VAL.text.toString()))).setScale(2,RoundingMode.FLOOR).toString()
+
                 TotalAT(AT1VAL,AT2VAL,AT3VAL,AT4VAL)
                 TotalTAX(Tax1VAL,Tax2VAL,Tax3VAL,Tax4VAL)
-                balls()
 
                 if(!(BuyValue1.text.toString().trim().equals("")) && BuyValue1.text.toString() != "." && BuyValue1.text.toString() != "0"){
-                    Profit1VAL.text = (kotlin.math.ceil(AfterTax1 - BuyValue1.text.toString().toFloat()*100).toInt().toFloat()/100).toString()
+
+                    Profit1VAL.text = (BigDecimal(AT1VAL.text.toString()).subtract(BigDecimal(BuyValue1.text.toString()))).toString()
+
                     ROI1VAL.text = df.format(RoiCalc(BuyValue1.text.toString().toFloat(),AfterTax1.toFloat()))
                     ROI1P.text = "%"
                     FontColorApply(1,RoiCalc(BuyValue1.text.toString().toFloat(),AfterTax1.toFloat()))
@@ -296,13 +285,15 @@ class MainActivity : AppCompatActivity() {
 
 
             //why does the first part use .equals() when the other uses !=, well you see I'm too lazy to change it so instead I'm making a comment here to address this inconsistency
-        BuyValue1.addTextChangedListener {
-            if(!(SellValue1.text.toString().trim().equals("")) && !(BuyValue1.text.toString().trim().equals("")) && BuyValue1.text.toString() != "." && SellValue1.text.toString() != "." && BuyValue1.text.toString() != "0" && SellValue1.text.toString() != "0"){
-                    AfterTax1 = SellValue1.text.toString().toFloat()*0.975
-                    Profit1VAL.text = df.format(AfterTax1 - BuyValue1.text.toString().toFloat())
+            BuyValue1.addTextChangedListener {
+                if(!(SellValue1.text.toString().trim().equals("")) && !(BuyValue1.text.toString().trim().equals("")) && BuyValue1.text.toString() != "." && SellValue1.text.toString() != "."){
+                    AfterTax1 = BigDecimal(SellValue1.text.toString()).multiply(BigDecimal("0.975"))
+
+
+                    Profit1VAL.text = (BigDecimal(AfterTax1.toString()).subtract(BigDecimal(BuyValue1.text.toString()))).setScale(2,RoundingMode.UP).toString()
                     ROI1P.text = "%"
                     ROI1VAL.text = df.format(RoiCalc(BuyValue1.text.toString().toFloat(),AfterTax1.toFloat()))
-                    AT1VAL.text= df.format(AfterTax1)
+
                     FontColorApply(1,RoiCalc(BuyValue1.text.toString().toFloat(),AfterTax1.toFloat()))
                     TotalProfit(Profit1VAL,Profit2VAL,Profit3VAL,Profit4VAL)
                     TotalROI(BuyValue1,BuyValue2,BuyValue3,BuyValue4)
@@ -319,7 +310,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         SellValue2.addTextChangedListener {
-            if (!(SellValue2.text.toString().trim().equals("")) && SellValue2.text.toString() != "." && SellValue2.text.toString() != "0") {
+            if (!(SellValue2.text.toString().trim().equals("")) && SellValue2.text.toString() != ".") {
 
                 AfterTax2 = SellValue2.text.toString().toFloat() * 0.975
                 AT2VAL.text = df.format(AfterTax2)
@@ -408,26 +399,26 @@ class MainActivity : AppCompatActivity() {
             }
 
             BuyValue3.addTextChangedListener {
-                    if(!(SellValue3.text.toString().trim().equals("")) && !(BuyValue3.text.toString().trim().equals("")) && BuyValue3.text.toString() != "." && SellValue3.text.toString() != "." && SellValue3.text.toString() != "0" && BuyValue3.text.toString() != "0"){
-                        AfterTax3 = SellValue3.text.toString().toFloat()*0.975
-                        Profit3VAL.text = df.format(AfterTax3 - BuyValue3.text.toString().toFloat())
-                        ROI3P.text = "%"
-                        ROI3VAL.text = df.format(RoiCalc(BuyValue3.text.toString().toFloat(),AfterTax3.toFloat()))
-                        AT3VAL.text= df.format(AfterTax3)
-                        FontColorApply(3,RoiCalc(BuyValue3.text.toString().toFloat(),AfterTax3.toFloat()))
-                        TotalProfit(Profit1VAL,Profit2VAL,Profit3VAL,Profit4VAL)
-                        TotalROI(BuyValue1,BuyValue2,BuyValue3,BuyValue4)
-                    }else{
-                        Profit3VAL.text = ""
-                        ROI3VAL.text = ""
-                        ROI3P.text = ""
-                        ROI3.setTextColor(Color.parseColor("#C3C3C3"))
-                        Profit3.setTextColor(Color.parseColor("#C3C3C3"))
-                        TotalProfit(Profit1VAL,Profit2VAL,Profit3VAL,Profit4VAL)
-                        TotalROI(BuyValue1,BuyValue2,BuyValue3,BuyValue4)
-                    }
+                if(!(SellValue3.text.toString().trim().equals("")) && !(BuyValue3.text.toString().trim().equals("")) && BuyValue3.text.toString() != "." && SellValue3.text.toString() != "." && SellValue3.text.toString() != "0" && BuyValue3.text.toString() != "0"){
+                    AfterTax3 = SellValue3.text.toString().toFloat()*0.975
+                    Profit3VAL.text = df.format(AfterTax3 - BuyValue3.text.toString().toFloat())
+                    ROI3P.text = "%"
+                    ROI3VAL.text = df.format(RoiCalc(BuyValue3.text.toString().toFloat(),AfterTax3.toFloat()))
+                    AT3VAL.text= df.format(AfterTax3)
+                    FontColorApply(3,RoiCalc(BuyValue3.text.toString().toFloat(),AfterTax3.toFloat()))
+                    TotalProfit(Profit1VAL,Profit2VAL,Profit3VAL,Profit4VAL)
+                    TotalROI(BuyValue1,BuyValue2,BuyValue3,BuyValue4)
+                }else{
+                    Profit3VAL.text = ""
+                    ROI3VAL.text = ""
+                    ROI3P.text = ""
+                    ROI3.setTextColor(Color.parseColor("#C3C3C3"))
+                    Profit3.setTextColor(Color.parseColor("#C3C3C3"))
+                    TotalProfit(Profit1VAL,Profit2VAL,Profit3VAL,Profit4VAL)
+                    TotalROI(BuyValue1,BuyValue2,BuyValue3,BuyValue4)
                 }
             }
+        }
 
 
 
@@ -464,25 +455,25 @@ class MainActivity : AppCompatActivity() {
             }
 
             BuyValue4.addTextChangedListener {
-                    if(!(SellValue4.text.toString().trim().equals("")) && !(BuyValue4.text.toString().trim().equals("")) && BuyValue4.text.toString() != "." && SellValue4.text.toString() != "." && SellValue4.text.toString() != "0" && BuyValue4.text.toString() != "0"){
-                        AfterTax4 = SellValue4.text.toString().toFloat()*0.975
-                        Profit4VAL.text = df.format(AfterTax4 - BuyValue4.text.toString().toFloat())
-                        ROI4P.text = "%"
-                        ROI4VAL.text = df.format(RoiCalc(BuyValue4.text.toString().toFloat(),AfterTax4.toFloat()))
-                        AT4VAL.text= df.format(AfterTax4)
-                        FontColorApply(4,RoiCalc(BuyValue4.text.toString().toFloat(),AfterTax4.toFloat()))
-                        TotalProfit(Profit1VAL,Profit2VAL,Profit3VAL,Profit4VAL)
-                        TotalROI(BuyValue1,BuyValue2,BuyValue3,BuyValue4)
-                    }else{
-                        Profit4VAL.text = ""
-                        ROI4VAL.text = ""
-                        ROI4P.text = ""
-                        ROI4.setTextColor(Color.parseColor("#C3C3C3"))
-                        Profit4.setTextColor(Color.parseColor("#C3C3C3"))
-                        TotalProfit(Profit1VAL,Profit2VAL,Profit3VAL,Profit4VAL)
-                        TotalROI(BuyValue1,BuyValue2,BuyValue3,BuyValue4)
-                    }
+                if(!(SellValue4.text.toString().trim().equals("")) && !(BuyValue4.text.toString().trim().equals("")) && BuyValue4.text.toString() != "." && SellValue4.text.toString() != "." && SellValue4.text.toString() != "0" && BuyValue4.text.toString() != "0"){
+                    AfterTax4 = SellValue4.text.toString().toFloat()*0.975
+                    Profit4VAL.text = df.format(AfterTax4 - BuyValue4.text.toString().toFloat())
+                    ROI4P.text = "%"
+                    ROI4VAL.text = df.format(RoiCalc(BuyValue4.text.toString().toFloat(),AfterTax4.toFloat()))
+                    AT4VAL.text= df.format(AfterTax4)
+                    FontColorApply(4,RoiCalc(BuyValue4.text.toString().toFloat(),AfterTax4.toFloat()))
+                    TotalProfit(Profit1VAL,Profit2VAL,Profit3VAL,Profit4VAL)
+                    TotalROI(BuyValue1,BuyValue2,BuyValue3,BuyValue4)
+                }else{
+                    Profit4VAL.text = ""
+                    ROI4VAL.text = ""
+                    ROI4P.text = ""
+                    ROI4.setTextColor(Color.parseColor("#C3C3C3"))
+                    Profit4.setTextColor(Color.parseColor("#C3C3C3"))
+                    TotalProfit(Profit1VAL,Profit2VAL,Profit3VAL,Profit4VAL)
+                    TotalROI(BuyValue1,BuyValue2,BuyValue3,BuyValue4)
                 }
+            }
         }
 
         discordlogo.setOnClickListener{
@@ -490,6 +481,22 @@ class MainActivity : AppCompatActivity() {
             val discordinvite: Uri = Uri.parse("https://www.discord.com/invite/k2mDMQaTSN")
             val openinvite = Intent(Intent.ACTION_VIEW, discordinvite)
             startActivity(openinvite)
+
+
+            /*
+
+            if((BigDecimal(SellValue1.text.toString()).multiply(BigDecimal("0.025"))).toString().substringAfter(".").trimEnd('0').length>2){
+                Tax1VAL.text = (BigDecimal(SellValue1.text.toString()).multiply(BigDecimal("0.025"))).setScale(2,RoundingMode.CEILING).toString()
+            }else{
+                Tax1VAL.text = (BigDecimal(SellValue1.text.toString()).multiply(BigDecimal("0.025"))).toString().trimEnd('0')
+            }
+
+
+
+
+
+             */
+
 
         }
 
