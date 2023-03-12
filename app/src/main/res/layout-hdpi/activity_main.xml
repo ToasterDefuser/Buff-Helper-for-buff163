@@ -75,28 +75,14 @@
 
 
     <EditText
-        android:id="@+id/BuyValue2"
-        android:layout_width="85dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
-        android:maxLength="8"
-        android:hint="@string/bought"
-        android:inputType="numberDecimal"
-        android:textAlignment="center"
-        android:textColor="@color/silk"
-        app:layout_constraintStart_toEndOf="@+id/BuyValue1"
-        app:layout_constraintTop_toBottomOf="@+id/topblock" />
-
-    <EditText
         android:id="@+id/BuyValue1"
         android:layout_width="85dp"
-        android:inputType="numberDecimal"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
-        android:maxLength="8"
+        android:layout_marginStart="204dp"
+        android:layout_marginTop="12dp"
         android:hint="@string/bought"
+        android:inputType="numberDecimal"
+        android:maxLength="8"
         android:textAlignment="center"
         android:textColor="@color/silk"
         app:layout_constraintStart_toEndOf="@+id/selltext"
@@ -106,11 +92,11 @@
         android:id="@+id/BuyValue3"
         android:layout_width="85dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
         android:hint="@string/bought"
-        android:maxLength="8"
         android:inputType="numberDecimal"
+        android:maxLength="8"
         android:textAlignment="center"
         android:textColor="@color/silk"
         app:layout_constraintStart_toEndOf="@+id/BuyValue2"
@@ -119,26 +105,111 @@
     <EditText
         android:id="@+id/BuyValue4"
         android:layout_width="85dp"
-        android:inputType="numberDecimal"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
         android:hint="@string/bought"
+        android:inputType="numberDecimal"
+        android:maxLength="8"
         android:textAlignment="center"
         android:textColor="@color/silk"
-        android:maxLength="8"
         app:layout_constraintStart_toEndOf="@+id/BuyValue3"
         app:layout_constraintTop_toBottomOf="@+id/topblock" />
+
+    <EditText
+        android:id="@+id/BuyValue2"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:hint="@string/bought"
+        android:inputType="numberDecimal"
+        android:maxLength="8"
+        android:textAlignment="center"
+        android:textColor="@color/silk"
+        app:layout_constraintStart_toEndOf="@+id/BuyValue1"
+        app:layout_constraintTop_toBottomOf="@+id/topblock" />
+
+    <TextView
+        android:id="@+id/Tax4VAL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/Tax4"
+        app:layout_constraintTop_toBottomOf="@+id/AT4VAL" />
+
+    <TextView
+        android:id="@+id/Tax4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="552dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tax"
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AT1" />
+
+    <TextView
+        android:id="@+id/Profit1VAL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/Profit1"
+        app:layout_constraintTop_toBottomOf="@+id/Tax1VAL" />
+
+    <TextView
+        android:id="@+id/AT3VAL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/AT3"
+        app:layout_constraintTop_toBottomOf="@+id/SellValue3" />
+
+    <TextView
+        android:id="@+id/ROI4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="552dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/roifix"
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Profit1" />
+
+    <TextView
+        android:id="@+id/Profit4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="552dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/prof"
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Tax1" />
 
     <EditText
         android:id="@+id/SellValue1"
         android:layout_width="85dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="8dp"
         android:hint="@string/sold"
-        android:maxLength="8"
         android:inputType="numberDecimal"
+        android:maxLength="8"
         android:textAlignment="center"
         android:textColor="@color/silk"
         app:layout_constraintStart_toEndOf="@+id/sell"
@@ -148,23 +219,22 @@
         android:id="@+id/SellValue2"
         android:layout_width="85dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
-        android:maxLength="8"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:hint="@string/sold"
         android:inputType="numberDecimal"
+        android:maxLength="8"
         android:textAlignment="center"
         android:textColor="@color/silk"
         app:layout_constraintStart_toEndOf="@+id/SellValue1"
         app:layout_constraintTop_toBottomOf="@+id/BuyValue2" />
-
 
     <EditText
         android:id="@+id/SellValue3"
         android:layout_width="85dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:hint="@string/sold"
         android:inputType="numberDecimal"
         android:maxLength="8"
@@ -178,121 +248,21 @@
         android:layout_width="85dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:hint="@string/sold"
         android:inputType="numberDecimal"
-        android:textAlignment="center"
         android:maxLength="8"
+        android:textAlignment="center"
         android:textColor="@color/silk"
         app:layout_constraintStart_toEndOf="@+id/SellValue3"
         app:layout_constraintTop_toBottomOf="@+id/BuyValue4" />
-
-
-    <TextView
-        android:id="@+id/ROI1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="31dp"
-        android:layout_marginTop="4dp"
-        android:text="@string/roifix"
-        android:textColor="@color/silk"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Profit1" />
-
-
-
-    <TextView
-        android:id="@+id/ROI1VAL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="4dp"
-        android:text=""
-        android:textColor="@color/silk"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/ROI1"
-        app:layout_constraintTop_toBottomOf="@+id/Profit1VAL" />
-
-    <TextView
-        android:id="@+id/ROI1P"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="4dp"
-        android:text=""
-        android:textColor="@color/silk"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/ROI1VAL"
-        app:layout_constraintTop_toBottomOf="@+id/Profit1VAL" />
-
-    <TextView
-        android:id="@+id/Profit1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="4dp"
-        android:text="@string/prof"
-        android:textColor="@color/silk"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Tax1" />
-
-
-    <TextView
-        android:id="@+id/Profit1VAL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="4dp"
-        android:text=""
-        android:textColor="@color/silk"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/Profit1"
-        app:layout_constraintTop_toBottomOf="@+id/Tax1VAL" />
-
-    <TextView
-        android:id="@+id/AT1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="12dp"
-        android:text="@string/at"
-        android:textColor="@color/silk"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SellValue1" />
-
-    <TextView
-        android:id="@+id/AT1VAL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="12dp"
-        android:textColor="@color/silk"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/AT1"
-        app:layout_constraintTop_toBottomOf="@+id/SellValue1" />
-
-    <TextView
-        android:id="@+id/Tax1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="4dp"
-        android:text="@string/tax"
-        android:textColor="@color/silk"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AT1" />
-
 
     <TextView
         android:id="@+id/Tax2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="126dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="364dp"
+        android:layout_marginTop="8dp"
         android:text="@string/tax"
         android:textColor="@color/silk"
         android:textSize="12sp"
@@ -303,222 +273,19 @@
         android:id="@+id/Tax2VAL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
         android:textColor="@color/silk"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/Tax2"
         app:layout_constraintTop_toBottomOf="@+id/AT2VAL" />
 
     <TextView
-        android:id="@+id/Tax1VAL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="4dp"
-        android:textColor="@color/silk"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/Tax1"
-        app:layout_constraintTop_toBottomOf="@+id/AT1VAL" />
-
-    <TextView
-        android:id="@+id/Profit2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="126dp"
-        android:layout_marginTop="4dp"
-        android:text="@string/prof"
-        android:textColor="@color/silk"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Tax1" />
-
-    <TextView
-        android:id="@+id/Profit2VAL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="4dp"
-        android:text=""
-        android:textColor="@color/silk"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/Profit2"
-        app:layout_constraintTop_toBottomOf="@+id/Tax2VAL" />
-
-
-
-    <TextView
-        android:id="@+id/ROI2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="126dp"
-        android:layout_marginTop="4dp"
-        android:text="@string/roifix"
-        android:textColor="@color/silk"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Profit1" />
-
-    <TextView
-        android:id="@+id/ROI2VAL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="4dp"
-        android:text=""
-        android:textColor="@color/silk"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/ROI2"
-        app:layout_constraintTop_toBottomOf="@+id/Profit2VAL" />
-
-    <TextView
-        android:id="@+id/ROI2P"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="4dp"
-        android:text=""
-        android:textColor="@color/silk"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/ROI2VAL"
-        app:layout_constraintTop_toBottomOf="@+id/Profit2VAL" />
-
-    <TextView
-        android:id="@+id/AT2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="126dp"
-        android:layout_marginTop="12dp"
-        android:text="@string/at"
-        android:textColor="@color/silk"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SellValue2" />
-
-    <TextView
-        android:id="@+id/AT2VAL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="12dp"
-        android:textColor="@color/silk"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/AT2"
-        app:layout_constraintTop_toBottomOf="@+id/SellValue2" />
-
-    <TextView
-        android:id="@+id/AT3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="219dp"
-        android:layout_marginTop="12dp"
-        android:text="@string/at"
-        android:textColor="@color/silk"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SellValue2" />
-
-    <TextView
-        android:id="@+id/AT3VAL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginStart="3dp"
-        android:text=""
-        android:textColor="@color/silk"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/AT3"
-        app:layout_constraintTop_toBottomOf="@+id/SellValue3" />
-
-    <TextView
-        android:id="@+id/Tax3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="219dp"
-        android:layout_marginTop="4dp"
-        android:text="@string/tax"
-        android:textColor="@color/silk"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AT1" />
-
-    <TextView
-        android:id="@+id/Tax3VAL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="4dp"
-        android:textColor="@color/silk"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/Tax3"
-        app:layout_constraintTop_toBottomOf="@+id/AT3VAL" />
-
-    <TextView
-        android:id="@+id/Profit3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="219dp"
-        android:layout_marginTop="4dp"
-        android:text="@string/prof"
-        android:textColor="@color/silk"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Tax1" />
-
-    <TextView
-        android:id="@+id/Profit3VAL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="4dp"
-        android:text=""
-        android:textColor="@color/silk"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/Profit3"
-        app:layout_constraintTop_toBottomOf="@+id/Tax3VAL" />
-
-    <TextView
         android:id="@+id/ROI3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="219dp"
-        android:layout_marginTop="4dp"
-        android:text="@string/roifix"
-        android:textColor="@color/silk"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Profit1" />
-
-    <TextView
-        android:id="@+id/ROI3VAL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="4dp"
-        android:text=""
-        android:textColor="@color/silk"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/ROI3"
-        app:layout_constraintTop_toBottomOf="@+id/Profit3VAL" />
-
-    <TextView
-        android:id="@+id/ROI3P"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="4dp"
-        android:text=""
-        android:textColor="@color/silk"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/ROI3VAL"
-        app:layout_constraintTop_toBottomOf="@+id/Profit3VAL" />
-
-    <TextView
-        android:id="@+id/ROI4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="312dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="456dp"
+        android:layout_marginTop="8dp"
         android:text="@string/roifix"
         android:textColor="@color/silk"
         android:textSize="12sp"
@@ -529,8 +296,8 @@
         android:id="@+id/ROI4VAL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
         android:text=""
         android:textColor="@color/silk"
         android:textSize="12sp"
@@ -541,46 +308,55 @@
         android:id="@+id/ROI4P"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
         android:text=""
         android:textColor="@color/silk"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/ROI4VAL"
         app:layout_constraintTop_toBottomOf="@+id/Profit4VAL" />
 
-
     <TextView
-        android:id="@+id/AT4"
+        android:id="@+id/ROI3P"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="312dp"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="12dp"
-        android:text="@string/at"
-        android:textColor="@color/silk"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SellValue2" />
-
-    <TextView
-        android:id="@+id/AT4VAL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginStart="3dp"
         android:text=""
         android:textColor="@color/silk"
         android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/AT4"
-        app:layout_constraintTop_toBottomOf="@+id/SellValue4" />
-
+        app:layout_constraintStart_toEndOf="@+id/ROI3VAL"
+        app:layout_constraintTop_toBottomOf="@+id/Profit3VAL" />
 
     <TextView
-        android:id="@+id/Tax4"
+        android:id="@+id/ROI3VAL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="312dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:text=""
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/ROI3"
+        app:layout_constraintTop_toBottomOf="@+id/Profit3VAL" />
+
+    <TextView
+        android:id="@+id/Tax1VAL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/Tax1"
+        app:layout_constraintTop_toBottomOf="@+id/AT1VAL" />
+
+    <TextView
+        android:id="@+id/Tax3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="456dp"
+        android:layout_marginTop="8dp"
         android:text="@string/tax"
         android:textColor="@color/silk"
         android:textSize="12sp"
@@ -588,22 +364,69 @@
         app:layout_constraintTop_toBottomOf="@+id/AT1" />
 
     <TextView
-        android:id="@+id/Tax4VAL"
+        android:id="@+id/Profit4VAL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text=""
         android:textColor="@color/silk"
         android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/Tax4"
-        app:layout_constraintTop_toBottomOf="@+id/AT4VAL" />
+        app:layout_constraintStart_toEndOf="@+id/Profit4"
+        app:layout_constraintTop_toBottomOf="@+id/Tax4VAL" />
 
     <TextView
-        android:id="@+id/Profit4"
+        android:id="@+id/Tax3VAL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="312dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/Tax3"
+        app:layout_constraintTop_toBottomOf="@+id/AT3VAL" />
+
+    <TextView
+        android:id="@+id/ROI2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="364dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/roifix"
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Profit1" />
+
+    <TextView
+        android:id="@+id/AT1VAL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/AT1"
+        app:layout_constraintTop_toBottomOf="@+id/SellValue1" />
+
+    <TextView
+        android:id="@+id/Tax1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="272dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/tax"
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AT1" />
+
+    <TextView
+        android:id="@+id/Profit2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="364dp"
+        android:layout_marginTop="8dp"
         android:text="@string/prof"
         android:textColor="@color/silk"
         android:textSize="12sp"
@@ -611,23 +434,190 @@
         app:layout_constraintTop_toBottomOf="@+id/Tax1" />
 
     <TextView
-        android:id="@+id/Profit4VAL"
+        android:id="@+id/AT4VAL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
         android:text=""
         android:textColor="@color/silk"
         android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/Profit4"
-        app:layout_constraintTop_toBottomOf="@+id/Tax4VAL" />
+        app:layout_constraintStart_toEndOf="@+id/AT4"
+        app:layout_constraintTop_toBottomOf="@+id/SellValue4" />
+
+    <TextView
+        android:id="@+id/Profit1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="268dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/prof"
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Tax1" />
+
+    <TextView
+        android:id="@+id/AT3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="456dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/at"
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SellValue2" />
+
+    <TextView
+        android:id="@+id/AT1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="276dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/at"
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SellValue1" />
+
+    <TextView
+        android:id="@+id/AT4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="552dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/at"
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SellValue2" />
+
+    <TextView
+        android:id="@+id/Profit2VAL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/Profit2"
+        app:layout_constraintTop_toBottomOf="@+id/Tax2VAL" />
+
+    <TextView
+        android:id="@+id/Profit3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="456dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/prof"
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Tax1" />
+
+    <TextView
+        android:id="@+id/AT2VAL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/AT2"
+        app:layout_constraintTop_toBottomOf="@+id/SellValue2" />
+
+    <TextView
+        android:id="@+id/ROI1P"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:text=""
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/ROI1VAL"
+        app:layout_constraintTop_toBottomOf="@+id/Profit1VAL" />
+
+    <TextView
+        android:id="@+id/ROI1VAL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:text=""
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/ROI1"
+        app:layout_constraintTop_toBottomOf="@+id/Profit1VAL" />
+
+    <TextView
+        android:id="@+id/Profit3VAL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:text=""
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/Profit3"
+        app:layout_constraintTop_toBottomOf="@+id/Tax3VAL" />
+
+    <TextView
+        android:id="@+id/AT2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="364dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/at"
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SellValue2" />
+
+    <TextView
+        android:id="@+id/ROI2P"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:text=""
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/ROI2VAL"
+        app:layout_constraintTop_toBottomOf="@+id/Profit2VAL" />
+
+    <TextView
+        android:id="@+id/ROI2VAL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="12dp"
+        android:text=""
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/ROI2"
+        app:layout_constraintTop_toBottomOf="@+id/Profit2VAL" />
+
+    <TextView
+        android:id="@+id/ROI1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="268dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/roifix"
+        android:textColor="@color/silk"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Profit1" />
 
 
     <TextView
         android:id="@+id/total"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="268dp"
+        android:layout_marginTop="284dp"
         android:shadowColor="#000000"
         android:shadowDx="2.5"
         android:shadowDy="2.3"
@@ -640,24 +630,27 @@
         app:layout_constraintTop_toTopOf="@+id/topblock" />
 
     <TextView
-        android:id="@+id/AT_total"
+        android:id="@+id/ROI_total"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/atspaced"
+        android:layout_marginTop="8dp"
+        android:text="@string/roispaced"
         android:textColor="@color/silk"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="@+id/total"
         app:layout_constraintStart_toStartOf="@+id/total"
-        app:layout_constraintTop_toBottomOf="@+id/total" />
+        app:layout_constraintTop_toBottomOf="@+id/Profit_total" />
 
     <TextView
         android:id="@+id/Tax_total"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:text="@string/taxspaced"
         android:textColor="@color/silk"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="@+id/total"
+        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="@+id/total"
         app:layout_constraintTop_toBottomOf="@+id/AT_total" />
 
@@ -665,6 +658,7 @@
         android:id="@+id/Profit_total"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:text="@string/profspaced"
         android:textColor="@color/silk"
         android:textSize="12sp"
@@ -673,15 +667,17 @@
         app:layout_constraintTop_toBottomOf="@+id/Tax_total" />
 
     <TextView
-        android:id="@+id/ROI_total"
+        android:id="@+id/AT_total"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/roispaced"
+        android:layout_marginTop="8dp"
+        android:text="@string/atspaced"
         android:textColor="@color/silk"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="@+id/total"
+        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="@+id/total"
-        app:layout_constraintTop_toBottomOf="@+id/Profit_total" />
+        app:layout_constraintTop_toBottomOf="@+id/total" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

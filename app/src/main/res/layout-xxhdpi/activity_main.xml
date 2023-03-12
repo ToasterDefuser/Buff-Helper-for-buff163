@@ -201,7 +201,6 @@
         app:layout_constraintTop_toBottomOf="@+id/Profit1" />
 
 
-
     <TextView
         android:id="@+id/ROI1VAL"
         android:layout_width="wrap_content"
@@ -244,7 +243,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="3dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="5dp"
         android:text=""
         android:textColor="@color/silk"
         android:textSize="12sp"
@@ -314,7 +313,7 @@
         android:id="@+id/Tax1VAL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
         android:textColor="@color/silk"
         android:textSize="12sp"
@@ -333,6 +332,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Tax1" />
 
+
     <TextView
         android:id="@+id/Profit2VAL"
         android:layout_width="wrap_content"
@@ -344,8 +344,6 @@
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/Profit2"
         app:layout_constraintTop_toBottomOf="@+id/Tax2VAL" />
-
-
 
     <TextView
         android:id="@+id/ROI2"
